@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\Skeleton\Tests;
+namespace HeaderX\Iframes\Tests;
 
 class ExampleTest extends TestCase
 {
