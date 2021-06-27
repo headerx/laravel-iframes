@@ -59,13 +59,6 @@ return [
 ];
 ```
 
-## Usage
-
-```php
-$laravel-iframes = new HeaderX\Iframes();
-echo $laravel-iframes->echoPhrase('Hello, Spatie!');
-```
-
 ## Testing
 
 ```bash
