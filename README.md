@@ -59,6 +59,18 @@ return [
     'external_link_key' => env('EXTERNAL_LINK_KEY', '?external_link='),
 ];
 ```
+## Usage
+- Install laravel jetstream, or publish the views and change the layout
+- Run `artisan serve`
+
+### External
+
+- Browse to http://localhost:8000/extras?external_link=https://example.com
+
+### Internal
+
+- Install some package with frontend stack you aren't using
+- Browse to http://localhost:8000/iframes/your-package-route
 
 ## Testing
 
