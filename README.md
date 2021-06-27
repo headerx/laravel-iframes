@@ -47,7 +47,7 @@ return [
     /**
      * The Route prefix under which to load external iframes,
      * such as from subdomains, static sites, or services
-     * running on another backend platform or framework
+     * running on another backend platform or framework.
      */
     'external_iframe_prefix' =>  env('EXTERNAL_IFRAME_PREFIX', 'extras'),
 
