@@ -37,7 +37,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Headerx\\Iframes\\Tests\\": "tests"
+            "HeaderX\\Iframes\\Tests\\": "tests"
         }
     },
     "scripts": {

@@ -7,7 +7,7 @@
             frameborder="0"
             noresize='noresize'
             scrolling='auto'
-            src="{{ $frame }}"
+            src="{{ $iframeSource }}"
             class="mainFrame">
         </iframe>
     </div>
