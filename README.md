@@ -28,6 +28,7 @@ php artisan vendor:publish --provider="HeaderX\Iframes\IframesServiceProvider" -
 This is the contents of the published config file:
 
 ```php
+<?php
 return [
     'theme' => 'jetstream',
 
