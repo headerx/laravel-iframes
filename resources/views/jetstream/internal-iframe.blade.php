@@ -10,7 +10,7 @@
                 noresize='noresize'
                 scrolling='auto'
                 src="{{ url($iframeSource . '?' . http_build_query($_GET)) }}"
-                class="maniFrame">
+                class="mainFrame">
             </iframe>
         </div>
     @else
