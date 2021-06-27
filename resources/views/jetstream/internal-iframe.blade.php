@@ -9,7 +9,7 @@
                 frameborder="0"
                 noresize='noresize'
                 scrolling='auto'
-                src="{{ url($frame . '?' . http_build_query($_GET)) }}"
+                src="{{ url($iframeSource . '?' . http_build_query($_GET)) }}"
                 class="maniFrame">
             </iframe>
         </div>
@@ -23,7 +23,7 @@
                 frameborder="0"
                 noresize='noresize'
                 scrolling='auto'
-                src="{{ url($frame) }}"
+                src="{{ url($iframeSource) }}"
                 class="mainFrame">
             </iframe>
         </div>

@@ -2,9 +2,9 @@
 
 namespace HeaderX\Iframes\Tests;
 
+use HeaderX\Iframes\IframesServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use HeaderX\Iframes\IframesServiceProvider;
 
 class TestCase extends Orchestra
 {

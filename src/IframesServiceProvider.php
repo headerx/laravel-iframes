@@ -4,7 +4,6 @@ namespace HeaderX\Iframes;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use HeaderX\Iframes\Commands\IframesCommand;
 
 class IframesServiceProvider extends PackageServiceProvider
 {
@@ -18,6 +17,7 @@ class IframesServiceProvider extends PackageServiceProvider
         $package
             ->name('laravel-iframes')
             ->hasConfigFile()
+            ->hasRoute('iframes')
             ->hasViews();
     }
 }

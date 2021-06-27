@@ -1,11 +1,10 @@
 <?php
 
-namespace App\Core\App\Controllers\Iframes;
+namespace HeaderX\Iframes\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Contracts\View\View;
 
-class InternalIframeController extends Controller
+class InternalIframeController
 {
     public function __invoke(string $path): View
     {
@@ -20,9 +19,9 @@ class InternalIframeController extends Controller
 
         parse_str($query_string, $_GET);
 
-        return view('headerx::'.config('iframes.theme').'.index', [
+        return view('iframes::'.config('iframes.theme').'.internal-iframe', [
             'iframeSource' => $path,
-            '$_GET' => $query_string
+            '$_GET' => $query_string,
         ]);
     }
 }
