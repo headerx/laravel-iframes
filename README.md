@@ -24,6 +24,9 @@ You can publish the config file with:
 ```bash
 php artisan vendor:publish --provider="HeaderX\Iframes\IframesServiceProvider" --tag="iframes-config"
 ```
+    If you are you are using jetstream, you may want to use replace 'web' middleware
+    below with 'sanctum', depending on your configurations but, this is just to say
+    the 'default' for jetstream is sanctum.
 
 This is the contents of the published config file:
 
