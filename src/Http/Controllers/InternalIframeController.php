@@ -10,8 +10,7 @@ class InternalIframeController
     {
         $query_string = '';
 
-
-        $uri = explode('?', $_SERVER['REQUEST_URI']);
+        $uri = explode('?', request()->server('REQUEST_URI'));
 
         if (count($uri) > 1) {
             $query_string = $uri[1];

@@ -8,10 +8,12 @@ class ExternalIframeController
 {
     public function __invoke(Request $request)
     {
-        if ($request->has(str_replace(['?', '='], '', config('iframes.external_link_key')))) {
-            $iframeSource = $request->{str_replace(['?', '='], '', config('iframes.external_link_key'))};
+        $key = str_replace(['?', '='], '', config('iframes.external_link_key'));
 
-            return view('laravel-iframes::'.config('iframes.theme').'.external-iframe', ['iframeSource' => $iframeSource]);
+        if ($request->has($key)) {
+            $iframeSource = $request->$key;
+
+            return view('iframes::'.config('iframes.theme').'.external-iframe', ['iframeSource' => $iframeSource]);
         }
         abort('404');
     }

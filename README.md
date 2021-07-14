@@ -24,10 +24,14 @@ You can publish the config file with:
 ```bash
 php artisan vendor:publish --provider="HeaderX\Iframes\IframesServiceProvider" --tag="iframes-config"
 ```
+    If you are you are using jetstream, you may want to use replace 'web' middleware
+    below with 'sanctum', depending on your configurations but, this is just to say
+    the 'default' for jetstream is sanctum.
 
 This is the contents of the published config file:
 
 ```php
+<?php
 return [
     'theme' => 'jetstream',
 
@@ -38,15 +42,16 @@ return [
 
     /**
      * The Route prefix under which views should be loaded in an iframe.
-     * This can be useful when you want to keep the appearance of the
-     * but the view contains css or javascript which is incompatible.
+     * This can be useful when you want to keep the appearance of the app
+     * layout but the view contains css or javascript which is incompatible,
+     * such as when using a package or some legacy views.
      */
     'internal_iframe_prefix' => env('INTERNAL_IFRAME_PREFIX', 'iframes'),
 
     /**
      * The Route prefix under which to load external iframes,
      * such as from subdomains, static sites, or services
-     * running on another backend platform or framework
+     * running on another backend platform or framework.
      */
     'external_iframe_prefix' =>  env('EXTERNAL_IFRAME_PREFIX', 'extras'),
 
@@ -58,13 +63,18 @@ return [
     'external_link_key' => env('EXTERNAL_LINK_KEY', '?external_link='),
 ];
 ```
-
 ## Usage
+- Install laravel jetstream, or publish the views and change the layout
+- Run `artisan serve`
 
-```php
-$laravel-iframes = new HeaderX\Iframes();
-echo $laravel-iframes->echoPhrase('Hello, Spatie!');
-```
+### External
+
+- Browse to http://localhost:8000/extras?external_link=https://example.com
+
+### Internal
+
+- Install some package with frontend stack you aren't using
+- Browse to http://localhost:8000/iframes/your-package-route
 
 ## Testing
 
@@ -87,6 +97,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 ## Credits
 
 - [inmanturbo](https://github.com/inmanturbo)
+- [imanghafoori1](https://github.com/imanghafoori1)
 - [All Contributors](../../contributors)
 
 ## License

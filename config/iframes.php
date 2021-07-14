@@ -11,8 +11,9 @@ return [
 
     /**
      * The Route prefix under which views should be loaded in an iframe.
-     * This can be useful when you want to keep the appearance of the
-     * but the view contains css or javascript which is incompatible.
+     * This can be useful when you want to keep the appearance of the app
+     * layout but the view contains css or javascript which is incompatible,
+     * such as when using a package or some legacy views.
      */
     'internal_iframe_prefix' => env('INTERNAL_IFRAME_PREFIX', 'iframes'),
 
