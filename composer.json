@@ -16,9 +16,9 @@
         }
     ],
     "require": {
-        "illuminate/contracts": ">=9.0",
-        "illuminate/routing": ">=9.0",
-        "illuminate/support": ">=9.0",
+        "illuminate/contracts": "*",
+        "illuminate/routing": "*",
+        "illuminate/support": "*",
         "spatie/laravel-package-tools": "^1.4.3"
     },
     "require-dev": {
